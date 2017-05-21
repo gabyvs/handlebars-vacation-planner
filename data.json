@@ -1,0 +1,18 @@
+{
+    "choices": [
+        {
+            "place": "Inverness",
+            "count": 3,
+            "id": 1
+        },
+        {
+            "place": "Vancouver",
+            "count": 2,
+            "id": 2
+        },{
+            "place": "Chicago",
+            "count": 1,
+            "id": 3
+        }
+    ]
+}
