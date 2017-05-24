@@ -1,11 +1,12 @@
-var model   = require('./modules/model');
-var view    = require('./modules/view');
+/**
+ * Entry point for the JS code
+ */
+var controller = require('./modules/controller');
 
 var app = {
 
     init: function () {
-        model.init();
-        view.init();
+        controller.init();
     }
 
 };

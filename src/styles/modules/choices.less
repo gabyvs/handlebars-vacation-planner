@@ -1,8 +1,13 @@
+/* =======================================
+Styles specific to choices template
+======================================= */
 .choices-container {
 
     background-color: @choices;
     flex-grow: 3;
 
+    // choices list will be displayed differently according to screen width
+    // Here are the styles for screens narrower than 620ox
     .section-list {
 
         li {
@@ -33,6 +38,8 @@
 
     }
 
+    // choices list will be displayed differently according to screen width
+    // Here are the styles for 620px screens and wider
     @media screen and (min-width: 620px) {
         .section-list {
             margin: 0 auto;
