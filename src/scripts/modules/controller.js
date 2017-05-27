@@ -5,19 +5,25 @@
 var service = require('./service');
 
 /**
+ * Given a list item, registers a click listener
+ */
+function addListener (listItem) {
+    listItem.addEventListener('click', function () {
+        var id = listItem.getAttribute('data-id');
+        service.setCurrent(id);
+        service.increment();
+        updateCount();
+    });
+}
+
+/**
  * Handles votes by listening to clicks on the choices
  */
 function registerClick () {
-    var id;
     var listItems = document.querySelectorAll('#choices li');
 
     listItems.forEach(function (item) {
-        item.addEventListener('click', function () {
-            id = this.getAttribute('data-id');
-            service.setCurrent(id);
-            service.increment();
-            updateCount();
-        });
+        addListener(item);
     });
 }
 
